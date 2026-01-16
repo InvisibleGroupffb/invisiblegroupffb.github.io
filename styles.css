@@ -430,3 +430,118 @@ html {
     background-color: var(--primary-green);
     color: white;
 }
+
+/* ===== Cookie Banner ===== */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-white);
+    box-shadow: 0 -4px 20px var(--shadow-hover);
+    z-index: 9999;
+    padding: 20px;
+    border-top: 3px solid var(--primary-green);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.cookie-banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cookie-banner-text {
+    flex: 1;
+}
+
+.cookie-banner-text p {
+    margin: 0 0 8px 0;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.cookie-banner-text p:last-child {
+    margin-bottom: 0;
+}
+
+.cookie-banner-text strong {
+    color: var(--dark-green);
+    font-size: 1.1rem;
+}
+
+.cookie-banner-text a {
+    color: var(--primary-green);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.cookie-banner-text a:hover {
+    color: var(--dark-green);
+}
+
+.cookie-banner-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.cookie-btn-accept {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.cookie-btn-accept:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-hover);
+}
+
+@media (max-width: 768px) {
+    .cookie-banner-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cookie-banner-text {
+        text-align: center;
+    }
+
+    .cookie-banner-actions {
+        justify-content: center;
+    }
+
+    .cookie-btn {
+        flex: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .cookie-banner {
+        padding: 15px;
+    }
+
+    .cookie-banner-text p {
+        font-size: 0.9rem;
+    }
+
+    .cookie-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
